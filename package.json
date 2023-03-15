@@ -20,6 +20,7 @@
     "@slidev/theme-seriph": "*"
   },
   "devDependencies": {
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "playwright-chromium": "^1.31.2"
   }
 }
