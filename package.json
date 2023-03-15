@@ -1,0 +1,25 @@
+{
+  "name": "slidev-template",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "f": "slidev format",
+    "b": "slidev build",
+    "d": "slidev --open",
+    "e": "slidev export",
+    "r": "slidev --remote"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format"
+    }
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.40.3",
+    "@slidev/theme-default": "*",
+    "@slidev/theme-seriph": "*"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}
