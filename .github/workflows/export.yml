@@ -7,10 +7,10 @@ jobs:
   export-pdf:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: "14"
+          node-version: 16
       - name: Install dependencies
         run: yarn
       - name: Format
@@ -24,7 +24,7 @@ jobs:
           TZ: "Europe/London"
         run: echo "CURRENT_DATETIME=$(date +'%Y%m%d')" >> $GITHUB_ENV
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: ${{ env.CURRENT_DATETIME }}_slidev
           path: ./slides-export.pdf
